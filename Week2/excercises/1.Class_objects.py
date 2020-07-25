@@ -1,5 +1,5 @@
 # Create a class of Product, Order, Apples, Potatoes
-#Create few object of apple class and potatoe class and 
+#Create a few object of apple class and potatoe class and 
 # print their type with type function
 # <Create a 5 orders dictionary, in which keys will be names of products, 
 # and values will be Instances of product class
