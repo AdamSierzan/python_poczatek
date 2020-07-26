@@ -1,3 +1,15 @@
+# Create a constructors with the class of:
+# Product(name, name of the catoegory, price)
+# Order (name, last name, list of products, total price (sum of prices from list of products))
+# Apple (name, size, price for kg)
+# Potato (name, size, proce for kg)
+# Create few objects of each class
+# 
+# Write a function that prints product and order
+# Create a function fo generate random list of products
+# Divide a projects into smaller modules, run it from main file
+
+
 import random
 
 
