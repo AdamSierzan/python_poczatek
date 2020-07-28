@@ -1,0 +1,1 @@
+# Bool method returns True or False
