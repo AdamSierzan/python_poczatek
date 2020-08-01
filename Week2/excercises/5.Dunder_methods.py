@@ -10,7 +10,12 @@ class Product:
     def __str__(self):
         return (f"Product name{self.name} | Category{self.category_name} | Price{self.price}")
 
-
+    def __eq__(self, other):
+        if self.__class__ != other.__class__:
+            return NotImplemented
+        return (self.name == other.name and
+                self.category_name == other.category_name and
+                self.price == other.price)
 
 class Order:
     
@@ -40,6 +45,15 @@ class Order:
         result = "\n".join([order_details, value_details, ordered_products])
         return result
 
+    def __len__(self):
+        return len(self.order_elements)
+
+    def __eq__(self, other):
+        if self.__class__ != other.__class__:
+            return NotImplemented
+        return  (self.name == other.name and
+                 self.last_name == other.last.name
+                 and self.order_elements == other.order_elements)
 
 def random_order():
     number_of_product = random.randint(1,20)
@@ -99,7 +113,6 @@ def run_homework():
 
     first_order = random_order()
     print(first_order)
-    first_order.__str__()
 
 
 run_homework()
