@@ -1,21 +1,24 @@
-import random
-from Apple import Apple
-from Potato import Potato
-from Order import Order, generate_order
-from Products import Product
+
 from Order_elements import OrderElement
-
-
-
-
+from Order import Order
+from Products import Product
+from Tax_calc import TaxCalculator, TaxRates
 
 def run_homework():
-    first_order = generate_order(22)
-    print(first_order)
-
     cookie = Product(name="Ciastko", category_name="Jedzenie", unit_price=4)
-    first_order.add_product_to_order(cookie, quantity=10)
-    print(first_order)
+    tomato = Product(name="Pomidor", category_name="Owoce i warzywa", unit_price=3)
+    something = Product(name="Coś", category_name="Nieznana kategoria", unit_price=50)
+    ten_cookies = OrderElement(cookie, quantity=10)
+    five_tomatoes = OrderElement(tomato, quantity=5)
+    single_something = OrderElement(something, quantity=1)
+
+    cookies_tax = TaxCalculator.tax_for_order_element(ten_cookies)
+    tomatoes_tax = TaxCalculator.tax_for_order_element(five_tomatoes)
+    something_tax = TaxCalculator.tax_for_order_element(single_something)
+
+    print(f"Cena ciastek: {ten_cookies.calculate_price()} + {cookies_tax:.2f}")
+    print(f"Cena pomidorów: {five_tomatoes.calculate_price()} + {tomatoes_tax:.2f}")
+    print(f"Cena czegoś: {single_something.calculate_price()} + {something_tax:.2f}")
 
 
 if __name__ == '__main__':
