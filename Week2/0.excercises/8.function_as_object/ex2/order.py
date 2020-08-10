@@ -1,25 +1,25 @@
 import random
-from Order_elements import OrderElement
-from Products import Product
+
 from discount_policy import default_policy
+from order_element import OrderElement
+from product import Product
 
 
 class Order:
     MAX_ELEMENTS = 5
 
-    def __init__(self, client_first_name, client_last_name, discount_policy = None, order_elements=None ):
+    def __init__(self, client_first_name, client_last_name, order_elements=None, discount_policy=None):
         self.client_first_name = client_first_name
         self.client_last_name = client_last_name
+
         if order_elements is None:
             order_elements = []
-        if len(order_elements) > Order.MAX_ELEMENTS:
-            order_elements = order_elements[:Order.MAX_ELEMENTS]
         self._order_elements = order_elements
+
         if discount_policy is None:
             discount_policy = default_policy
         self.discount_policy = discount_policy
         self.total_price = self._calculate_total_price()
-
 
     def _calculate_total_price(self):
         total_price = 0
@@ -65,7 +65,9 @@ class Order:
         return len(self._order_elements)
 
     @classmethod
-    def generate_order(cls, number_of_products):
+    def generate_order(cls, number_of_products=None):
+        if number_of_products is None:
+            number_of_products = random.randint(1, 10)
         order_elements = []
         for product_number in range(number_of_products):
             product_name = f"Produkt-{product_number}"
@@ -77,9 +79,3 @@ class Order:
 
         order = Order(client_first_name="Mikołaj", client_last_name="Lewandowski", order_elements=order_elements)
         return order
-
-    
-    
-        
-
-
