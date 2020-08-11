@@ -10,7 +10,7 @@ def run_homework():
     first_name = "Mikołaj"
     last_name = "Lewandowski"
     
-    order_elements = generate_order_elements()
+    order_elements = generate_order_elements(3)
     normal_order = Order(first_name, last_name, order_elements)
     loyal_customer_order = Order(first_name, last_name, order_elements, discount_policy=loyal_customer_policy)
     christmas_order = Order(first_name, last_name, order_elements, discount_policy=christmas_policy)
