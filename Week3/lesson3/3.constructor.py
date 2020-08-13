@@ -15,12 +15,12 @@ class Teacher:
 
 
 class Tutor(Teacher):
-    # pass
+    pass
 
-    # def __init__(self, name, subject):
-    #     print("To ja - konstruktor klasy potomnej")
-    #     super().__init__(name, subject)
-    #     print(f"Tutaj jest dostęp do pól klasy bazowej: name={self.name}")
+    def __init__(self, name, subject):
+        print("To ja - konstruktor klasy potomnej")
+        super().__init__(name, subject)
+        print(f"Tutaj jest dostęp do pól klasy bazowej: name={self.name}")
 
     # def __init__(self, name, subject):
     #     print(f"A tu jeszcze nie ma dostępu do pól klasy bazowej {self.name}")
