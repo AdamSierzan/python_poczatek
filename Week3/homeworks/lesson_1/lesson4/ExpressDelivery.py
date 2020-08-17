@@ -14,8 +14,8 @@ class ExpressDelivery(Order):
         for element in self._order_elements:
             total_price += element.calculate_price()
         return self.discount_policy(total_price) + ExpressDelivery.EXPRESS_DELIVERY_FEE
-
-
+    
+   
     def __str__(self):
         mark_lines = "-"*20
         order_details = f"Delivery for {self.client_first_name} {self.client_last_name}"
@@ -26,4 +26,4 @@ class ExpressDelivery(Order):
             product_details += f"\t{element}\n"
 
         result = "\n".join([mark_lines, order_details, value_details, delivery_date, product_details])
-        return result 
+        return result
