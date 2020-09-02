@@ -30,7 +30,7 @@ def run_homework():
     missing_products = set(needed_products).difference(recieved_products)
     print(f"Brakuje {missing_products}")
 
-  print(f"Łącznie otrzymano {set(recieved_products)}")
+  print(f"Łącznie otrzymano {set(recieved_products)set(range(0,11))})
 
 
 if __name__ == '__main__':
