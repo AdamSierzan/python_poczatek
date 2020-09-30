@@ -9,7 +9,7 @@
 # # When using:
 # # from "whatever" import *
 # # we import all elements form module
-# # We have to watch out because we can easily loose 
+# # We have to watch out because we can easily loose
 # # control over imported packages
 
 # # We can use underscore "_", then python wont import it
@@ -19,7 +19,7 @@
 # from "something" import " something" as "something"
 
 # # If we are in the same package (folder) as the other files
-# # we can use 
+# # we can use
 # # It's called relative import
 # from . import "something"
 

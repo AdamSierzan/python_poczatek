@@ -1,4 +1,6 @@
 from orders import create_new_order
+
+
 def run_shop():
     print("Hi, welcome to my shop, tell me what you need")
 
@@ -10,18 +12,14 @@ def run_shop():
         total_price = result["total_price"]
         print(total_price)
 
+
 if __name__ == "__main__":
     run_shop()
 
     # wqewqewqe
 
-
-
     # qwewqewqe
 
-
-
     # qwewqeeqw
-
 
     # eqweqwe

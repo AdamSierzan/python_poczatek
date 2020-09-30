@@ -2,11 +2,11 @@ import math
 
 # Math library contain a lot of usefull methods
 
-# PI 
+# PI
 
 print("pi", math.pi)
 
-# Sinus 
+# Sinus
 sinus_180 = math.sin(math.pi)
 
 print("sinus", sinus_180)
@@ -20,4 +20,4 @@ very_big_number = 100_000_000_000_000
 the_biggest_num = math.inf
 
 # Infinity is bigger than anything else
-print('the_biggest_number > very_big_number:', the_biggest_num > very_big_number)
+print("the_biggest_number > very_big_number:", the_biggest_num > very_big_number)

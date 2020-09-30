@@ -13,11 +13,10 @@ hello.say_hello_with_name(name)
 
 # First it checks the list of previosly loaded modules
 # Then he checks the library
-# Then the catalog 
+# Then the catalog
 # And then localization in PythonPath
 # THen he checks installed undefault libraries
 
-# If we would like to use welcome.py script in different 
+# If we would like to use welcome.py script in different
 # script, not directly but from other destination
 # we have to create catalog and import it to our python path
- 
