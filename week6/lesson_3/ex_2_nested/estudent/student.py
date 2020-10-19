@@ -1,5 +1,5 @@
-from estudent.grade import FinalGrade
-from estudent.grade_calculator import GradeCalculator
+from grade import FinalGrade
+from grade_calculator import GradeCalculator
 
 
 class Student:

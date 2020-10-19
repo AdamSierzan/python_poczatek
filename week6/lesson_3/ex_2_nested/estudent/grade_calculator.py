@@ -1,4 +1,4 @@
-from estudent.errors import LogicError
+from errors import LogicError
 
 
 class GradeCalculator:
